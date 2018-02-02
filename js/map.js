@@ -273,10 +273,10 @@ function main() {
     const activate = document.querySelector('#activate-btn');
     activate.addEventListener('click', () => {
         if (enabled) {
-            activate.innerHTML = 'Karte aktivieren';
+            activate.innerHTML = 'Zoom aktivieren';
             disableMap()
         } else {
-            activate.innerHTML = 'Karte deaktivieren';
+            activate.innerHTML = 'Zoom deaktivieren';
             enableMap()
         };
         enabled = !enabled;
