@@ -214,7 +214,7 @@ function main() {
         var near5 = leafletKnn(copy).nearest(L.latLng(lat, lon), 10000, 5000);
         var near10 = leafletKnn(copy).nearest(L.latLng(lat, lon), 10000, 10000);
         var near20 = leafletKnn(copy).nearest(L.latLng(lat, lon), 10000, 20000);
-        document.getElementById("infotext").innerHTML = '<center><p><b>Nächster Arzt:<br> ' +
+        document.getElementById("infotext").innerHTML = '<center><p><b>Nächste Praxis:<br> ' +
             nearest[0].layer.feature.properties.praxis + '</p></b>' +
             'Ärzte im Umkreis von 1km: ' + near1.length + '<br>' +
             'Ärzte im Umkreis von 5km: ' + near5.length + '<br>' +
