@@ -62,6 +62,7 @@ function main() {
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         id: 'mapbox.light',
         accessToken: "pk.eyJ1IjoiZGFoaWx6ZW4zMiIsImEiOiJjaXZ5OWwxam8wMDFqMnpxOXc4Y3l5dXd1In0.S9lbvSNNnpsOs4BXCzZoVg",
+        attribution: 'Code: <a href="https://www.twitter.com/dahilzen">David Hilzendegen</a> | Daten: <a href="https://www.arztsuche-bw.de/">KVBW</a>, <a href="https://www.kzvbw.de/site/service/praxissuche">KZVBW</a> | <a href="https://github.com/dahilzen/aerzte_in_der_region">Quellcode</a>'
     }).addTo(map);
 
     // Die Marker abrufen und clustern
@@ -226,7 +227,7 @@ function main() {
     function onEachFeature(feature, layer) {
         layer.on('click', function(e) {
             document.getElementById("infotext").innerHTML = '<center><p><b>Praxis ' +
-                feature.properties.praxis + '</b></p><p>' + feature.properties.straße +
+                feature.properties.praxis + '</b></p><p>' + feature.properties.strasse +
                 ' in ' + feature.properties.plz_ort + '</center>';
         });
     }
